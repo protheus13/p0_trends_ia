@@ -1,0 +1,9 @@
+services:
+  news_pipeline:
+    build: .
+    stdin_open: true  # Permite interação com terminal (necessário para o nano e inputs)
+    tty: true         # Aloca um pseudo-TTY
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data

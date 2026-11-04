@@ -1,9 +1,13 @@
 import llm_call, news_files, time, subprocess
+from pathlib import Path
 
 c1 = llm_call.CallLLM()
 e1 = news_files.NewsExtract()
 
-ARQUIVO_LINKS = "../data/news_links.txt"
+BASE_DIR = Path(__file__).resolve().parent.parent
+ARQUIVO_LINKS = BASE_DIR / "data" / "news_links.txt"
+
+# ARQUIVO_LINKS = "../data/news_links.txt"
 subprocess.run(["nano", ARQUIVO_LINKS])
 input(
     "\nPressione enter para iniciar o resumo das notícias dos links informados..."
