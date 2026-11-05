@@ -5,12 +5,11 @@ c = llm_call.CallLLM()
 
 def concatenar_resumos(self, txt_busca: str = "resumo_[news*.txt", 
                        final_file: str = "resumos_compilados.txt"):
-    arquivos = sorted(glob.glob(os.path.join(c.PASTA_DESTINO, txt_busca))
+    arquivos = sorted(glob.glob(os.path.join(c.PASTA_DESTINO, txt_busca)))
     num_arquivos = len(arquivos)
     
     if not arquivos:                  
         return print("Nenhum arquivo encontrado! Insira links de noticias para os resumos.")
-    )
     
     path_final = os.path.join(c.PASTA_DESTINO, final_file)
     
