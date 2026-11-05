@@ -27,7 +27,7 @@ class NewsExtract:
         total_links = len(links)
         
         for i, url in enumerate(links, start=1):
-            print(f"Percentual baixado: [{i}/{total_links}*{100} %] | URL: {url}")
+            print(f"Percentual baixado: [{i}/{total_links}] | URL: {url}")
                 
             # baixa o conteudo do link
             download = trafilatura.fetch_url(url)
